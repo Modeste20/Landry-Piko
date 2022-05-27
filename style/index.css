@@ -1,0 +1,497 @@
+/*Déclaration de variables css*/
+:root{
+    --primary-color:#8261ee;
+    --secondary-color:#ff589e;
+    --link-color:#954e6b;
+}
+
+
+/* Styles générales*/
+
+html{
+    font-size:10px;
+    font-family: Roboto,Georgia,Verdana, Geneva, Tahoma, sans-serif;
+    color:#18000ac4;
+    scroll-behavior: smooth;
+    overflow-x:hidden;
+    overflow-y:scroll;
+    width:100%;
+}
+
+body{
+    font-size:1.6rem;
+    overflow-x:hidden;
+    overflow-y: hidden;
+}
+
+h1,
+h2,
+h3,h4,
+h5,
+h6{
+    font-family:Raleway,Georgia,Verdana, Geneva, Tahoma, sans-serif;
+}
+
+h1{
+    font-weight: 900;
+    font-size:2.5rem;
+}
+
+@media only screen and (min-width:501px){
+    h1{
+        font-size:3.2rem !important;
+    }
+}
+
+h2{
+    font-weight: 800;
+    font-size:2.8rem;
+}
+
+h3{
+    font-weight: 700;
+    font-size:2rem;
+}
+
+h4{
+    font-weight: 700;
+    font-size:1.8rem;
+}
+
+h5{
+    font-size:1.5rem;
+}
+
+p{
+    font-family:Roboto;
+    line-height:1.4;
+}
+
+ul,li{
+    list-style-type: none;
+}
+
+ul{
+    margin:0;
+    padding:0;
+}
+
+a{
+    text-decoration:none;
+    color:var(--link-color);
+    font-weight:500;
+}
+
+a:hover{
+    color:#d44d86;
+}
+
+.btn-link{
+    padding-top:15px;
+    padding-bottom: 15px;
+    min-width:200px;
+    border-radius: 25px;
+    background-color: antiquewhite;
+    display:inline-block;
+    margin-top:20px;
+    margin-bottom:20px;
+}
+
+/*
+    styles de la page
+*/
+
+/* | Header */
+
+.header{
+    position:fixed;
+    top:20px;
+    left:0;
+    right:0;
+    z-index:1;
+}
+
+.header .header-icon{
+    width:30px;
+    height:30px;
+    background-image: url(../images/bars.png);
+    background-position:6.5px 6.5px;
+    background-size:17px 17px;
+    background-repeat: no-repeat;
+    margin-right:12px;
+    cursor:pointer;
+}
+
+.header .header-container{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    min-height:80px;
+    border-radius:50px;
+    box-shadow:1px 1px 3px #18000a24,
+               -1px -1px 3px #18000a24;
+    background-color:#fff;
+    width:100%;
+    margin:0;
+}
+
+@media only screen and (min-width:501px) and (max-width:990px){
+    .header .header-container{
+        width:85%;
+    }
+}
+
+.header .header-navbar{
+    position:absolute;
+    right:-100%;
+    opacity:0;
+    top:90px;
+    width:200px;
+    background:#fff;
+    padding:15px 0 15px 20px;
+    border-radius:25px;
+    box-shadow:30px 30px 100px rgba(0,0,0,.2);
+    transition:.4s;
+}
+
+.header-navbar.is-open{
+    opacity:1;
+    right:40px;
+}
+
+
+
+.header .header-navbar ul li{
+    margin:20px 0px;
+}
+
+.header .header-navbar ul li a{
+    padding:5px;
+    color:#18000ac4;
+    transition:.3s;
+}
+
+.header .header-navbar ul li a.is-active{
+    color:var(--secondary-color);
+}
+
+.header .header-navbar ul li a:hover{
+    color:var(--secondary-color);
+}
+
+@media only screen and (min-width:992px){
+    .header .header-navbar{
+        position:static;
+        opacity:1;
+        background:transparent;
+        width:auto;
+        box-shadow: none;
+        height:auto;
+    }
+    .header .header-navbar ul{
+        display:flex;
+    }
+
+    .header .header-navbar ul li{
+        margin:0 8px;
+    }
+    
+    .header .header-navbar ul li a{
+        padding:5px;
+        color:#18000ac4;
+    }
+
+    .header .bars{
+        display:none;
+    }
+}
+
+
+
+
+/*Main*/
+
+/* Bannière*/
+
+.banner-area {
+    height:100vh;
+    background-image:url(./../images/banner-bg1.png);
+    background-size: cover;
+    background-position:bottom left;
+    background-repeat: no-repeat;
+    color:#f1eff8;
+    width:100%;
+}
+
+@media only screen and (max-width:600px){
+    .banner-area .banner-content p,
+    .banner-area .banner-content h1{
+       margin:0 10px !important;
+    }
+}
+
+.banner-area .banner-content{
+    width:750px;
+    text-align: center;
+}
+
+.banner-area .banner-content .banner-button{
+    background-color: #c4336f;
+    color:inherit
+}
+
+.banner-area .banner-content p{
+    line-height:1.5
+}
+
+/*Qualities sections*/
+
+.qualities{
+    margin-top:-150px;
+}
+
+.qualities .qualities-article{
+    border-radius:25px;
+    background:#fff;
+    box-shadow: 3px 3px 50px rgba(0, 0, 0, .3);
+    padding:20px 5px;
+    margin:20px 17px 50px 17px;
+    max-width:300px;
+    cursor:pointer;
+}
+
+@media only screen and (min-width:1200px){
+    .qualities .qualities-article{
+        margin-bottom: 20px;
+    }
+}
+
+.qualities .qualities-article:hover .qualities-head{
+    background-color: #fea6cb;
+}
+
+
+
+@media only screen and (min-width:690px) and (max-width:767px){
+    .qualities .qualities-article:nth-child(2) {
+        margin-right:0 !important;
+    }
+    .qualities .qualities-article:first-child{
+        margin-left:0;
+    }
+}
+
+.qualities .qualities-article  .qualities-head{
+    width:120px;
+    height:120px;
+    margin:auto;
+    border-radius:50%;
+    background-color: #a78fee;
+}
+
+.qualities .qualities-article  .qualities-content{
+    text-align:center
+}
+
+.qualities .qualities-container{
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    padding-bottom: 60px;
+}
+
+/* Description*/
+
+.description .description-child{
+    margin:35px 15px;
+}
+
+.description .description-child .description-illustration{
+    margin:auto;
+}
+
+.description .description-child .description-content{
+    margin-top:30px;
+}
+
+@media only screen and (min-width:501px){
+    .description .description-child{
+        margin-left:auto;
+        margin-right:auto;
+        width:500px;
+    }
+    
+    .description .description-child .description-illustration{
+        width:350px;
+    }
+
+    .description .description-child .description-content{
+        width:500px;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .description .description-child{
+        display:flex;
+        justify-content: space-between;
+        padding:100px 0;
+        width:auto;
+    }
+
+    .description .description-child.description-help .description-content{
+        order:1;
+    }
+
+    .description .description-child.description-help .description-illustration{
+        order:2;
+    }
+}
+
+
+.description .description-child .description-illustration img{
+    width:100%
+}
+
+.description .description-child .description-content h3{
+   font-size:2.5rem;
+   font-weight:600
+}
+
+.description .separator{
+    width:100%;
+    height:.8px;
+    background-color:#18000a4b;
+}
+
+/*Work proccess*/
+
+.work-proccess{
+    width:100%;
+    background-image:url(../images/bg-work-process-small.png);
+    background-position:center;
+    background-repeat: no-repeat;
+    background-size:cover;
+    padding:40px 0;
+}
+
+@media only screen and (min-width:1000px){
+    .work-proccess{
+        background-image:url(../images/bg-work-process.png);
+    }
+}
+
+.work-proccess .work-head{
+    width:auto;
+    margin:15px auto;
+    text-align: center;
+    color:#f1eff8;
+}
+
+@media only screen and (min-width:550px){
+    .work-proccess .work-head{
+        width:500px;
+    }
+}
+
+.work-proccess .some-proccess > article {
+    text-align:center;
+    width:150px;
+    margin-right:auto;
+    margin-left:auto;
+    margin-top:40px;
+    border-radius:25px;
+    padding-top:12px;
+    padding-bottom: 10px;
+    box-shadow: 8px 8px #8261ee;
+    background-color: #f1eff8;
+}
+
+@media only screen and (min-width:360px){
+    .work-proccess .some-proccess{
+        display:flex;
+        justify-content:space-evenly;
+        padding:30px 0;
+        flex-wrap:wrap
+    }
+
+    .work-proccess .some-proccess > article {
+        margin-right:12px;
+        margin-left:0;
+    }
+}
+
+.work-proccess .some-proccess > article :last-child {
+    margin-right:0
+}
+
+.work-proccess .some-proccess > article p {
+    margin-top:0;
+    font-size:13px;
+}
+
+.work-proccess .some-proccess > article h4 {
+    margin-bottom:5px;
+    font-size:15px
+}
+
+
+/*Utilitaires*/
+
+.container {
+    padding-left: 15px;
+    padding-right: 15px;
+    margin-left:auto;
+    margin-right:auto;
+    width:auto
+}
+
+@media only screen and (min-width:501px) and (max-width:767px){
+    .container {
+        padding-left: 10px;
+        padding-right: 10px;
+        width:auto;
+    }
+}
+
+@media only screen and (min-width:768px){
+    .container {
+        max-width:900px;
+        width:98% 
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .container {
+        max-width:1140px;
+        width:100% 
+    }
+}
+
+.center{
+    display: flex;
+    justify-content: center;
+    align-items:center
+}
+
+
+/*
+
+Notes générales
+
+    Breakpoints 
+
+        styles normales pour les petits écrans
+
+        min-width:501px 
+
+        min-width:768px
+
+        min-width:992px
+
+        min-width:1200px;
+
+        min-width:1550px
+
+*/
+
+

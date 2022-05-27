@@ -1,0 +1,54 @@
+
+
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/black/raleway-black-webfont.woff2') format('woff2'),
+         url('fonts/Raleway/black/raleway-black-webfont.woff') format('woff'),
+         url('fonts/Raleway/black/Raleway-Black.ttf') format('truetype');
+    font-weight: 900;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/extra-bold/raleway-extrabold-webfont.woff2') format('woff2'),
+         url('fonts/Raleway/extra-bold/raleway-extrabold-webfont.woff') format('woff'),
+         url('fonts/Raleway/extra-bold/Raleway-ExtraBold.ttf') format('truetype');
+    font-weight: 800;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/bold/raleway-bold-webfont.woff2') format('woff2'),
+         url('fonts/Raleway/bold/raleway-bold-webfont.woff') format('woff'),
+         url('fonts/Raleway/bold/Raleway-Bold.ttf') format('truetype');
+    font-weight: 700;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/semi-bold/raleway-semibold-webfont.woff2') format('woff2'),
+         url('fonts/Raleway/semi-bold/raleway-semibold-webfont.woff') format('woff'),
+         url('fonts/Raleway/semi-bold/Raleway-SemiBold.ttf') format('truetype');
+    font-weight:600;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Raleway';
+    src: url('fonts/Raleway/medium/raleway-medium-webfont.woff2') format('woff2'),
+         url('fonts/Raleway/medium/raleway-medium-webfont.woff') format('woff'),
+         url('fonts/Raleway/medium/Raleway-Medium.ttf') format('truetype');
+    font-weight: 500;
+    font-style: normal;
+}
+
+@font-face {
+    font-family: 'Roboto';
+    src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
+    font-weight: normal;
+    font-style: normal;
+}
