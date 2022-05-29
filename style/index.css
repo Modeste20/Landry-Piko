@@ -94,6 +94,7 @@ a:hover{
     background-color: antiquewhite;
     display:inline-block;
     margin-top:20px;
+    text-align: center;
     margin-bottom:20px;
 }
 
@@ -250,10 +251,12 @@ a:hover{
     margin-top:-150px;
 }
 
-.qualities .qualities-article{
+.qualities .qualities-article,
+.temoignages .temoignages-articles > article,
+.tarifs .tarification > article{
     border-radius:25px;
     background:#fff;
-    box-shadow: 3px 3px 50px rgba(0, 0, 0, .3);
+    box-shadow: 0px 0px 80px rgba(0, 0, 0, .3);
     padding:20px 5px;
     margin:20px 17px 50px 17px;
     max-width:300px;
@@ -261,7 +264,9 @@ a:hover{
 }
 
 @media only screen and (min-width:1200px){
-    .qualities .qualities-article{
+    .qualities .qualities-article,
+    .temoignages .temoignages-articles > article,
+    .tarifs .tarification > article{
         margin-bottom: 20px;
     }
 }
@@ -273,10 +278,14 @@ a:hover{
 
 
 @media only screen and (min-width:690px) and (max-width:767px){
-    .qualities .qualities-article:nth-child(2) {
-        margin-right:0 !important;
+    .qualities .qualities-article:nth-child(2),
+    .temoignages .temoignages-articles > article:nth-child(2),
+    .tarifs .tarification > article:nth-child(2) {
+        margin-right:0;
     }
-    .qualities .qualities-article:first-child{
+    .qualities .qualities-article:first-child,
+    .temoignages .temoignages-articles > article:first-child,
+    .tarifs .tarification > article:first-child{
         margin-left:0;
     }
 }
@@ -293,7 +302,10 @@ a:hover{
     text-align:center
 }
 
-.qualities .qualities-container{
+.qualities .qualities-container,
+.temoignages .temoignages-articles,
+.tarifs .tarification
+{
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -380,7 +392,10 @@ a:hover{
     }
 }
 
-.work-proccess .work-head{
+.work-proccess .work-head,
+.temoignages .temoignages-head,
+.tarifs .tarifs-head
+{
     width:auto;
     margin:15px auto;
     text-align: center;
@@ -388,7 +403,10 @@ a:hover{
 }
 
 @media only screen and (min-width:550px){
-    .work-proccess .work-head{
+    .work-proccess .work-head,
+    .temoignages .temoignages-head,
+    .tarifs .tarifs-head
+    {
         width:500px;
     }
 }
@@ -433,6 +451,167 @@ a:hover{
     margin-bottom:5px;
     font-size:15px
 }
+
+
+/*Témoignages*/
+
+.temoignages{
+    padding-top:50px;
+}
+
+.temoignages .temoignages-head{
+    color:#18000ac4;
+    margin-bottom:35px;
+}
+
+.temoignages .temoignages-head h2{
+    margin-bottom:7px;
+}
+
+.temoignages .temoignages-head h2 + p{
+    margin-top:0;
+}
+
+.temoignages .temoignages-articles{
+    padding:35px 0;
+}
+
+.temoignages .temoignages-articles .testimonials{
+    padding-bottom:75px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    position:relative;
+    transition:.3s;
+    box-shadow: 0px 0px  10px rgba(0, 0, 0, .3);
+}
+
+.temoignages .temoignages-articles .testimonials:hover{
+    transform:scale(1.1);
+}
+
+.temoignages .temoignages-articles .testimonials .quote-symbol{
+    width:60px;
+    height:80px;
+    margin:0;
+    margin-left: 20px;
+    background-image: url(./../images/quotes-left.svg);
+    background-repeat: no-repeat;
+}
+
+.temoignages .temoignages-articles .testimonials blockquote{
+    margin-left:8px;
+    margin-right:8px;
+    margin-bottom:20px;
+    font-family:Raleway;
+    color:#17000a94;
+}
+
+.temoignages .temoignages-articles .testimonials .testimonial-author{
+    text-align:center;
+    position:absolute;
+    left:0;
+    right:0;
+    bottom:25px;
+}
+
+.temoignages .temoignages-articles .testimonials .testimonial-author .author-post{
+    color:var(--primary-color);
+    font-size:1.5rem;
+    font-weight:600;
+}
+
+.temoignages .temoignages-articles .testimonials .testimonial-author h4{
+    margin-bottom:8px;
+}
+
+@media only screen and (min-width:501px){
+    .temoignages .temoignages-articles .testimonials blockquote{
+        margin-left:15px;
+        margin-right:15px;
+        margin-bottom:23px;
+        font-size:1.7rem;
+    }
+}
+
+/*Tarifs*/
+
+.tarifs{
+    padding:45px 0;
+}
+
+.tarifs .tarification{
+    width:100%;
+    padding:50px 0;
+}
+
+.tarifs .tarification > article {
+    text-align:center;
+    border-radius: 15px;
+    width:100%;
+    box-shadow: 2px 3px 45px rgba(0, 0, 0, .3);
+}
+
+.tarifs .tarification > article .features-list ul{
+    margin:20px 0;
+	list-style-position: inside;
+	list-style-image: url(../images/success-icon.png);
+}
+
+@media only screen and (min-width:400px){
+    .tarifs .tarification > article .features-list ul{
+        width:55%;
+        text-align:left;
+        margin-left:auto;
+        margin-right:auto;
+    }
+}
+
+.tarifs .tarification > article .features-list ul li{
+   line-height: 2.2em;
+   font-size:1.5rem
+}
+
+.tarifs .tarification > article .features-list ul li.is-not-active{
+    list-style-image: url(../images/fail-icon.png);
+ }
+
+.tarifs .tarification > article .price-per-month{
+    font-size:2rem;
+    font-family:Raleway;
+    margin:15px 5px;
+    padding:15px 10px;
+    border-radius:15px;
+    color:#f1eff8;
+    width:auto;
+    background-color: #4014d1;
+}
+
+.tarifs .tarification > article.plan-premium .price-per-month{
+    background-color:#ca0d5b;
+    color:#fff
+}
+
+.tarifs .tarification > article .price-per-month  div:first-child{
+    font-size:2.5rem;
+    font-weight:1000;
+    font-family: Roboto;
+ }
+
+.tarifs .tarification > article .price-per-month  div:last-child{
+   margin-top:10px;
+   font-size:1.4rem
+}
+
+.tarifs .tarifs-head{
+    color:#18000ac4;
+}
+
+.tarifs .tarifs-head p{
+    margin-top:0;
+}
+
+
 
 
 /*Utilitaires*/
