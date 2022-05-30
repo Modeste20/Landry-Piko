@@ -19,7 +19,7 @@ const headerLinks = document.querySelectorAll('.header .header-navbar ul li a')
 
 for(const i of headerLinks){
     i.addEventListener('click',(e) => {
-        if(e.currentTarget.classList.contains('is-active')){
+        if(!e.currentTarget.classList.contains('is-active')){
             e.preventDefault()
         } else{
             document.querySelector('.header .header-navbar ul li a.is-active').classList.remove('is-active')
