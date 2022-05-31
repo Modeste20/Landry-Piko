@@ -215,13 +215,38 @@ a:hover{
 /* Bannière*/
 
 .banner-area {
-    height:100vh;
-    background-image:url(./../images/banner-bg1.png);
+    height:80vh;
+    background-image:url(./../images/banner/banner-bg.jpg);
     background-size: cover;
-    background-position:bottom left;
+    background-position:top left;
     background-repeat: no-repeat;
     color:#f1eff8;
-    width:100%;
+}
+
+@media only screen and (min-width:501px){
+    .banner-area{
+        background-image:url(./../images/banner/banner-bg-sm.jpg);
+    }
+}
+
+@media only screen and (min-width:768px){
+    .banner-area{
+        background-position:center;
+        height:90vh;
+        background-image:url(./../images/banner/banner-bg-md.jpg);
+    }
+}
+
+@media only screen and (min-width:992px){
+    .banner-area{
+        background-image:url(./../images/banner/banner-bg-lg.jpg);
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .banner-area{
+        background-image:url(./../images/banner/banner-bg-xl.jpg);
+    }
 }
 
 @media only screen and (max-width:600px){
@@ -248,7 +273,13 @@ a:hover{
 /*Qualities sections*/
 
 .qualities{
-    margin-top:-150px;
+    margin-top:-100px
+}
+
+@media only screen and (min-width:768px){
+    .qualities{
+        margin-top:-150px
+    }
 }
 
 @media only screen and (min-width:1200px){
@@ -273,6 +304,8 @@ a:hover{
     text-align:center
 }
 
+
+
 .qualities .qualities-container,
 .temoignages .temoignages-articles,
 .tarifs .tarification,
@@ -282,6 +315,10 @@ a:hover{
     flex-wrap: wrap;
     justify-content: space-around;
     padding-bottom: 60px;
+}
+
+.qualities .qualities-container{
+    padding-bottom:0;
 }
 
 /* Description*/
@@ -351,7 +388,7 @@ a:hover{
 
 .work-proccess{
     width:100%;
-    background-image:url(../images/bg-work-process-small.png);
+    background-image:url(../images/work/bg-work-proccess.jpg);
     background-position:center;
     background-repeat: no-repeat;
     background-size:cover;
@@ -362,9 +399,27 @@ a:hover{
     color:#f1eff8;
 }
 
-@media only screen and (min-width:1000px){
+@media only screen and (min-width:501px){
     .work-proccess{
-        background-image:url(../images/bg-work-process.png);
+        background-image:url(../images/work/bg-work-proccess-sm.jpg);
+    }
+}
+
+@media only screen and (min-width:768px){
+    .work-proccess{
+        background-image:url(../images/work/bg-work-proccess-md.jpg);
+    }
+}
+
+@media only screen and (min-width:992px){
+    .work-proccess{
+        background-image:url(../images/work/bg-work-proccess-lg.jpg);
+    }
+}
+
+@media only screen and (min-width:1200px){
+    .work-proccess{
+        background-image:url(../images/work/bg-work-proccess-xl.jpg);
     }
 }
 
@@ -451,7 +506,7 @@ a:hover{
     height:80px;
     margin:0;
     margin-left: 20px;
-    background-image: url(./../images/quotes-left.svg);
+    background-image: url(./../images/temoignages/quotes-left.svg);
     background-repeat: no-repeat;
 }
 
@@ -508,7 +563,7 @@ a:hover{
 .tarifs .tarification > article .features-list ul{
     margin:20px 0;
 	list-style-position: inside;
-	list-style-image: url(../images/success-icon.png);
+	list-style-image: url(../images/tarifs/success-icon.png);
 }
 
 @media only screen and (min-width:400px){
@@ -526,7 +581,7 @@ a:hover{
 }
 
 .tarifs .tarification > article .features-list ul li.is-not-active{
-    list-style-image: url(../images/fail-icon.png);
+    list-style-image: url(../images/tarifs/fail-icon.png);
  }
 
 .tarifs .tarification > article .price-per-month{
@@ -594,7 +649,7 @@ a:hover{
         display:block;
         width:75px;
         height:50px;
-        background-image:url(./../images/stats-separator.png);
+        background-image:url(./../images/stats/stats-separator.png);
         background-repeat:no-repeat;
         background-position: center;
         right:-47px;
@@ -627,6 +682,10 @@ a:hover{
     font-weight:900;
     font-family:raleway;
     margin-bottom:10px;
+}
+
+.stats .stats-container .stats-info .stats-number span{
+    font-weight:normal;
 }
 
 .stats .stats-container .stats-info .stats-label{
