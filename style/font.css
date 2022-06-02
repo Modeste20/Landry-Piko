@@ -8,6 +8,7 @@
          url('fonts/Raleway/black/Raleway-Black.ttf') format('truetype');
     font-weight: 900;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -17,6 +18,7 @@
          url('fonts/Raleway/extra-bold/Raleway-ExtraBold.ttf') format('truetype');
     font-weight: 800;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -26,6 +28,7 @@
          url('fonts/Raleway/bold/Raleway-Bold.ttf') format('truetype');
     font-weight: 700;
     font-style: normal;
+    font-display: swap;
 }
 
 @font-face {
@@ -44,6 +47,7 @@
          url('fonts/Raleway/medium/Raleway-Medium.ttf') format('truetype');
     font-weight: 500;
     font-style: normal;
+    font-display:swap;
 }
 
 @font-face {
@@ -51,4 +55,5 @@
     src: url('fonts/Roboto/Roboto-Regular.ttf') format('truetype');
     font-weight: normal;
     font-style: normal;
+    font-display:swap;
 }
