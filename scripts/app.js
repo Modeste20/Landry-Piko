@@ -18,6 +18,9 @@ const headerLinks = document.querySelectorAll('.header .header-navbar ul li a')
 
 for(const i of headerLinks){
     i.addEventListener('click',(e) => {
+        if(barsElment.nextElementSibling.classList.contains('is-open')){
+            barsElment.nextElementSibling.classList.remove('is-open')
+        }
         if(e.currentTarget.classList.contains('is-active')){
             e.preventDefault()
         } else{
@@ -33,7 +36,7 @@ for(const i of headerLinks){
 const {hash} = window.location;
 
 if(hash){
-    const linkElement = document.querySelector('.header .header-navbar ul li a'+hash)
+    const linkElement = document.querySelector('.header .header-navbar ul li a'+hash+'e')
     if(linkElement){
         document.querySelector('.header .header-navbar ul li a.is-active').classList.remove('is-active')
         linkElement.classList.add('is-active')
