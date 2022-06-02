@@ -215,7 +215,7 @@ a:hover{
 /* Bannière*/
 
 .banner-area {
-    height:80vh;
+    height:98vh;
     background-image:url(./../images/banner/banner-bg.jpg);
     background-size: cover;
     background-position:top left;
@@ -273,7 +273,7 @@ a:hover{
 /*Qualities sections*/
 
 .qualities{
-    margin-top:-100px
+    margin-top:-75px
 }
 
 .qualities .qualities-article,
@@ -302,7 +302,7 @@ a:hover{
     height:120px;
     margin:auto;
     border-radius:50%;
-    background-color: #a78fee;
+    background-color: #8e80b8;
 }
 
 .qualities .qualities-article  .qualities-content{
